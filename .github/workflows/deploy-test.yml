@@ -40,5 +40,5 @@ jobs:
           echo "Added"
           git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
           echo "Ready to push"
-          git push main:main
+          git push origin main
 
