@@ -35,6 +35,7 @@ jobs:
           git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2.git
           cp README.md repo2
           cd repo2
+          cat README.md
           git add .
           git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
-          git push https://muthugit:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2 $GITHUB_REF
+          git push
