@@ -29,9 +29,9 @@ jobs:
       - name: Copy to another
         run: |
           git config --global user.name "muthugit"
-          git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2 target
-          cp README.md target
-          cd target
+          git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2
+          cp README.md repo2
+          cd repo2
           git add .
           git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
-          git push target master
+          git push
