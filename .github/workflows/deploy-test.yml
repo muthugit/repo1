@@ -29,7 +29,6 @@ jobs:
       - name: Copy to another
         run: |
           git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2 target
-          rm everything but the .git directory
           copy source\files target
           cd target
           git add .
