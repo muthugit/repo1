@@ -29,7 +29,7 @@ jobs:
       - name: Copy to another
         run: |
           git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2 target
-          copy source\files target
+          cp README.md target/new.md
           cd target
           git add .
           git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
