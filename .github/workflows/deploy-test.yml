@@ -30,7 +30,7 @@ jobs:
         run: |
           git config --global user.name "muthugit"
           git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2 target
-          cp README.md target/new.md
+          cp README.md target
           cd target
           git add .
           git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
