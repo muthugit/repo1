@@ -17,10 +17,11 @@ jobs:
             repository: muthugit/repo2
             token: ${{ secrets.GITHUB_TOKEN }}
             path: ./repo2
+       
 
         - name: Copy/Create file
           run: |
-            echo "this is new file" > new.md
+            echo "this is new file" > repo2/new.md
 
         - name: Push Project B
           run: |
