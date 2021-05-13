@@ -15,7 +15,7 @@ jobs:
           uses: actions/checkout@master
           with: 
             repository: muthugit/repo2
-            token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ secrets.PAT_TOKEN }}
             path: ./repo2
        
 
