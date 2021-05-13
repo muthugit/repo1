@@ -28,6 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Copy to another
         run: |
+          git config --global user.name "muthugit"
           git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2 target
           cp README.md target/new.md
           cd target
