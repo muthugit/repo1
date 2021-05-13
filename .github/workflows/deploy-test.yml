@@ -32,7 +32,7 @@ jobs:
       - name: Copy to another
         run: |
           git config --global user.name "muthugit"
-          git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2
+          git clone https://muthugit:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2
           cp README.md repo2
           cd repo2
           cat README.md
