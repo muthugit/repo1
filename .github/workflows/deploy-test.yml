@@ -24,6 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          repository: muthugit/repo2
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Runs a single command using the runners shell
       - name: Copy to another
@@ -34,4 +37,4 @@ jobs:
           cd repo2
           git add .
           git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
-          git push
+          git push https://muthugit:${{ secrets.GITHUB_TOKEN }}@github.com/muthugit/repo2 $GITHUB_REF
