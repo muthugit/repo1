@@ -40,4 +40,5 @@ jobs:
           echo "Added"
           git diff-index --quiet HEAD || git commit -m "Automatic publish from github.com/project"
           echo "Ready to push"
-          git push
+          git push --force --quiet "https://muthugit:${{ secrets.GITHUB_TOKEN }}@$github.com/muthugit/repo2" main:main
+
