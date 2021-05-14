@@ -11,17 +11,17 @@ jobs:
           with:
             path: ./repo1
 
-        - name: Checkout Project B
+        - name: Checkout MonoRepo
           uses: actions/checkout@master
           with: 
-            repository: muthugit/repo2
+            repository: muthugit/mono_repo
             token: ${{ secrets.PAT_TOKEN }}
-            path: ./repo2
+            path: ./mono_repo
        
 
         - name: Copy/Create file
           run: |
-            echo "this is new file" > repo2/new.md
+            cp ./repo1/README.md ./mono_repo/repo1.md
 
         - name: Push Project B
           run: |
